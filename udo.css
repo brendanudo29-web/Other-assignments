@@ -1,0 +1,30 @@
+body {
+  background: black;            /* like the screenshot */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;                /* boxes side by side */
+  justify-content: center;      /* center horizontally */
+  margin-top: 50px;             /* top spacing */
+}
+
+.box {
+  background: green;            /* box background */
+  color: white;                 /* text color */
+  padding: 10px 20px;           /* inner spacing (Box Model) */
+  margin: 0 10px;               /* outer spacing between boxes */
+  font-size: 18px;
+  text-align: center;
+  border-radius: 3px;           /* slight rounded corners (optional) */
+cursor: pointer;              /* shows a hand cursor */
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s; 
+}
+
+/* Hover effect */
+.box:hover {
+  background: darkgreen;        /* darker green on hover */
+  transform: translateY(-3px);  /* lifts box up slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* subtle shadow */
+}
+

@@ -1,0 +1,47 @@
+.pagination {
+  display: inline-block;
+}
+
+.pagination a,
+.pagination button {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;        /* inner spacing */
+  margin: 0 3px;            /* space between */
+  border: 1px solid #ccc;   /* outline */
+  background: white;
+  cursor: pointer;
+}
+
+.pagination a:hover,
+.pagination button:hover {
+  background: #eee;
+}
+.stretch-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;      /* vertical & horizontal padding */
+  font-size: 16px;
+  cursor: pointer;
+  transition: padding 0.3s ease;
+}
+
+.stretch-btn:hover {
+  padding: 20px 40px;      /* grows when hovered */
+}
+.shadow-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 darkgreen;    /* creates depth */
+  transition: all 0.1s ease;
+}
+
+.shadow-btn:active {
+  box-shadow: 0 2px 0 darkgreen;    /* moves “down” */
+  transform: translateY(3px);       /* simulates click */
+}

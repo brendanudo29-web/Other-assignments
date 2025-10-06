@@ -1,0 +1,194 @@
+/* General page style */
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+/* Common box style */
+.box {
+  background: white;
+  color: black;
+  padding: 16px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+/* 5a — Tahoma */
+.box5a p {
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* 5b — Arial headline with red sub-text */
+.box5b h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+.box5b .sub {
+  font-family: Arial, sans-serif;
+  color: red;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 5c — Verdana course card */
+.box5c {
+  font-family: Verdana, sans-serif;
+}
+.box5c h3 {
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+.box5c .small {
+  color: gray;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+.box5c p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.box5c button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 5d — Arial headline with blue link */
+.box5d h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.box5d .sub {
+  font-size: 14px;
+  color: gray;
+  margin: 0 0 8px;
+}
+.box5d a {
+  color: blue;
+  text-decoration: none;
+  font-size: 14px;
+}
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.title {
+  color: red;
+  margin-bottom: 4px;
+}
+
+.hint {
+  margin-bottom: 20px;
+}
+
+/* Common card style */
+.card {
+  background: white;
+  color: black;
+  width: 320px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+
+/* 5e – MacBook */
+.card5e {
+  text-align: center;
+}
+.card5e .new {
+  color: orange;
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+.card5e .product {
+  font-weight: normal;
+  margin: 0 0 8px;
+}
+.card5e .headline {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+.card5e .price {
+  font-size: 14px;
+  color: gray;
+  margin: 0 0 12px;
+}
+.card5e .buy {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 5f – Stock info */
+.card5f {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.card5f .top-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.card5f .main-price {
+  font-size: 32px;
+  font-weight: bold;
+}
+.card5f .currency {
+  color: gray;
+  font-size: 14px;
+}
+.card5f .today .green {
+  color: green;
+}
+.card5f .after .price2 {
+  font-weight: bold;
+}
+.card5f .after .red {
+  color: red;
+}
+
+/* 5g – Tweet-style */
+.card5g {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.card5g .bold {
+  font-weight: bold;
+}
+.card5g .handle {
+  color: gray;
+  margin-left: 4px;
+}
+.card5g .time {
+  color: gray;
+  margin-left: 4px;
+}
+.card5g .mention {
+  color: rgb(29, 155, 240); /* Twitter blue */
+}

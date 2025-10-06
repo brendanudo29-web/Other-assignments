@@ -1,84 +1,44 @@
- <style>
-  .requst-button {
-    background-color: black (200, 0, 0);
-    color:white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-right: 8px; 
-    margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
-    transition:opacity 1.5s ;
-    vertical-align: top ;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Button group"</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="button-group">
+    <button class="btn primary">Get started</button>
+    <button class="btn secondary">Download</button>
+  </div>
 
-.requst-button:hover{
-   opacity: 0.8;
-}
-
- .requst-button:active {
-  opacity: 0.5;
- }
-  .Add to cart  {
-background-color: yellow;
-border-color: white(6, 95,212);
-border-style: solid;
-border: width 1px; 
-color:black
-(6, 95,212); 
- border-radius: 2px;
- cursor: pointer;
- padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 16px;
-    padding-right: 16px;
-
- transition: background-color 0.15s,
- color 0.15s;
-}
-
-
-.Add to cart :hover{
-  background-color:yellow(41, 118,211);
-  color: white;
-  
-}
-
-.Add to cart :active{
-  opacity: 0.7;
-}
-.Sign up {
- background-color green (0, 15, 0);
- color: white; 
- border: none;
- height: 36px;
- width: 74px;
- border-radius: 18px;
- font-weight: bold;
-font-size: 15px;
-cursor: pointer;
-margin-left: 8px;
-transition: box-shadow 0.15s;
-vertical-align: top;
-}
+  <div class="button-group">
+    <button class="btn primary">Apply on company website</button>
+    <button class="btn secondary">Save</button>
+  </div>
+</body><button class="btn add-to-cart">Add to Cart</button>
+<button class="btn sign-up">Sign up</button>
+<button class="btn request-now">Request now</button>
+<div class="product-card">
+  <a href="#" class="back-link">Back to Amazon</a>
+  <h2 class="product-title">Nike Black Running Shoes</h2>
+  <p class="price">$39 <span class="in-stock">- in stock.</span></p>
+  <p class="delivery">Free delivery tomorrow.</p>
+  <div class="button-group">
+    <button class="btn add-to-cart">Add to Cart</button>
+    <button class="btn buy-now">Buy now</button>
+  </div>
+</div>
+<div class="pagination">
+  <butto>Back</butto n>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <button>Next</button>
+</div>
 
 
-.Sign up:hover{
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-}
- </style>
 
- <button class="requst-button">
-Requst now
-</button>
-
-<button class="Add to cart">
-  JOIN
-</button>
-
- <button class="Sign up">
-  Tweet
-</button>
+</html>

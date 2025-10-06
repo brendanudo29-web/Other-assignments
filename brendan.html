@@ -1,16 +1,82 @@
-<p>
-  Hello, World!
-</p>
-<p>
-  Today I went to the grocery store to buy some egg and vegtables.
-</p>
-<button>
-  Click
+ <style>
+  .Subscribe-button {
+    background-color: rgb(204, 0, 0) ;
+    color:white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px; 
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition:opacity 1.5s ;
+    vertical-align: top ;
+  }
+
+.Subscribe-button:hover{
+   opacity: 0.8;
+}
+
+ .Subscribe-button:active {
+  opacity: 0.5;
+ }
+  .join-button  {
+background-color: white;
+border-color: rgb(6, 95,212);
+border-style: solid;
+border: width 1px; 
+color:white (6, 95,212); 
+ border-radius: 2px;
+ cursor: pointer;
+ padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+ transition: background-color 0.15s,
+ color 0.15s;
+}
+.join-button:hover{
+  background-color:rgb(6,  95, 212);
+  color: white;
+  
+}
+.join-button:active{ 
+  opacity: 0.7; 
+}
+
+.tweet-button {
+  background-color: rgb(29, 155, 240);
+   color:white;
+     border: none;
+     padding-bottom: 8px;
+     padding-top: 8px;
+     padding-left: 16px;
+     padding-right: 16px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: box-shadow 0.15s;
+    vertical-align: top;
+} 
+
+.tweet-button:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+ </style>
+
+ <button class="Subscribe-button">
+SUBSCRIBE
 </button>
-<button>
-  Brendan 
+
+<button class="join-button">
+  JOIN
 </button>
-<button>
-  chocolate
+
+ <button class="Tweet-button">
+  Tweet
 </button>
- <a href="https://www.google.com/search?q=link+to+google+search&oq=link+&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIGCAAQRRg5MgwIARAjGCcYgAQYigUyBggCEEUYOzIMCAMQABhDGIAEGIoFMgYIBBBFGD0yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgzMTE0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">Search with Google</a>
