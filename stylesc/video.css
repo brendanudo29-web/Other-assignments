@@ -1,0 +1,46 @@
+
+
+      .video-preview {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+      }
+
+      .thumbnails {
+        width: 300px;
+        display: block;
+        border-radius: 10px;
+      }
+      .video-info-grid{
+       display: grid;
+       grid-template-columns: 50px  1fr ;
+       }
+
+      .channel-picture {
+        display: inline-block;
+        width: 50px;
+        vertical-align: top; 
+        background-color: gray ;
+      }
+
+      .video-info {
+        display: inline-block;
+        width: 230px;
+        vertical-align: top;
+        margin-left: 5px;
+        background-color: gray ;
+      } 
+
+      .profile-picture {
+        width: 50px;
+        border-radius: 50%;
+      }
+
+      .video-title-brendan {
+        width: 100%;
+        font-weight: bold;
+        margin: 0;
+      }
+
+     
