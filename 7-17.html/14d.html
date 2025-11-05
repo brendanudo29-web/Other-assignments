@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 d</title>
+  <style>
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white  
+}
+.modal-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.element {
+  position: fixed;
+  width: 100px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: green;
+  color: white;
+  padding: 15px 5px;
+}
+  </style>
+</head>
+<body>
+  <div class="modal-overlay">
+  </div>
+  <div class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-title">Modal Title</div>
+    <div class="modal-body">This is a modal</div>
+    <button class="modal-close-button">Close</button>
+    <div class="element">right sidebar</div>
+  </div>
+</div>
+</body>
+</html>

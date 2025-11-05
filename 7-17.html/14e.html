@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 e</title>
+  <style>
+    .facebook-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 50px;
+  
+}
+
+  </style>
+</head>
+<body>
+  <header class="facebook-header">
+    <div class="profile-info">
+        <img src="../channel-pictures/channel-1.jpeg" alt="Profile-info ">
+        <span>Oliver Cat</span>
+    </div>
+    <div class="actions">
+        <button class="add-friend">Add Friend</button>
+        <button class="message">Message</button>
+    </div>
+</header>
+<div style="height: 1500px;">Scroll down to test the fixed header!</div> 
+</body>
+</html>

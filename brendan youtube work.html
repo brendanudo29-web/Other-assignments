@@ -1,60 +1,274 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Brendan YouTube Clone</title>
-    <link rel="preconnect" href=" https://fonts.googleapis.com">
-        <link rel="preconnect" href=" https://fonts.googleapis.com"
-        crossorigin>
-        <link href="http://fonts.google.com/css2?family=Roboto:weight@400;500;700&display=swap"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="stylesc/general.css">
-         <link rel="stylesheet" href="stylesc/header.css">
-          <link rel="stylesheet" href="stylesc/video.css">
-  </head>
-  <body> 
-    <div class=" header">
-      <div class=" left section">
-        left section
-      </div>
-      <div class=" middle section"><input class="search-bar" type="text" placeholder="Search" /> </div></div>
-      <div class=" right section">
-        right section
-      </div>
-      
-    <div class="video-preview">
-      <img class="thumbnails" src="thumbnails/thumbnail-1.webp" />
+    <link rel="stylesheet" href="stylesc/general.css">
+    <link rel="stylesheet" href="stylesc/header.css">
+    <link rel="stylesheet" href="stylesc/video.css">
+     <link rel="stylesheet" href="stylesc/sidebar.css">
+</head>
+<body>
 
-      <div>
-      </div class="video-info-grid">
-        <div class="channel-picture">
-          <img class="profile-picture" src="channel-pictures/channel-1.jpeg" />
+    <div class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+            <img class="youtube-logo" src="icons/youtube-logo.svg">
         </div>
-
-        <div class="video-info">
-          <p class="video-title-brendan">
-            Talking Tech and AI with Google CEO Sundar Pichai!
-          </p>
-          <p>Marques Brownlee</p>
-          <p>3.4M views · 6 months ago</p>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon"
+                src="icons/search.svg">             
+                <div class="tooltip">Search</div>
+        </button>
+            <button class="voice-search-button">
+                <img src="icons/voice-search-icon.svg">
+                 <div class="tooltip">Search with your voice</div> 
+            </button>
         </div>
-      </div>
+        <div class="right-section">
+            <img class="upload" src="icons/upload.svg">
+            <img class="youtube-apps" src="icons/youtube-apps.svg">
+            <div class="notifications-icons-contianer">
+                <img class="notifications" src="icons/notifications.svg">
+                <div class="notifications-count">5</div>
+            </div>
+            
+            <img class="dan"src="thumbnails/dan.jpg">
+        </div>
     </div>
+     
 
-    
-    <div class="video-preview">
-      <img class="thumbnails" src="thumbnails/thumbnail-2.webp" />
-
-      <div class=" video-info-grid">
-        <div class="channel-picture">
-          <img class="profile-picture" src="channel-pictures/channel-2.jpeg" />
-        </div>
-
-        <div class="video-info">
-          <p class="video-title-brendan">Try Not To Laugh Challenge #9</p>
-          <p>Markiplier</p>
-          <p>19M views · 4 years ago</p>
-        </div>
-      </div>
+    <div class="sidebar">
+        <div class="sidebar-link"><img src="icons/home.svg">Home</div>
+        <div class="sidebar-link"><img src="icons/explore.svg">Explore</div>
+        <div class="sidebar-link"><img src="icons/notifications.svg">Notifications</div>
+        <div class="sidebar-link"><img src="icons/originals.svg">Originals</div>
+        <div class="sidebar-link"><img src="icons/youtube-music.svg"><span>YouTube Music</span></div>
+        <div class="sidebar-link"><img src="icons/library.svg">Library</div>
     </div>
-  </body>
+    <div class="video-grid">
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnails" src="thumbnails/thumbnail-1.webp">
+                <div class="video-time">14:20</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnails" src="thumbnails/dan.jpg">
+                <div class="video-time">8:20</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="thumbnails/dan.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        Try no to laugh Challange
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnails" src="thumbnails/thumbnail-3.webp" />
+            <div class="video-time">9:13</div>
+        </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-3.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                    Crazy Tik Toks Taken Moments Before DISATER
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnails" src="thumbnails/thumbnail-4.webp" />
+                 <div class="video-time">22:O9</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-4.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">The Simplest Math problem No one </p>
+                    <p>Markiplier</p>
+                    <p>19M views · 4 years ago</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                 <img class="thumbnails" src="thumbnails/thumbnail-5.webp"/>
+            <div class="video-time">11:17</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-5.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        kadane's Alogrithm to Maximum summary
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                 <img class="thumbnails" src="thumbnails/thumbnail-6.webp" />
+            <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-6.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">Anything You Can Fit In the Circle</p>
+                    <p>Markiplier</p>
+                    <p>19M views · 4 years ago</p>
+                </div>
+            </div>
+        </div>
+         
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+                <img class="thumbnails" src="thumbnails/thumbnail-7.webp" />
+            <div class="video-time">10:13</div>
+        </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-7.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        Why  Plane Don't Fly Over Tibet 
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+             <div class="thumbnail-row">
+              <img class="thumbnails" src="thumbnails/thumbnail-8.webp" />
+            <div class="video-time">10:13</div>
+             </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-8.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">Inside The World's Biggest passangar plane </p>
+                    <p>Markiplier</p>
+                    <p>19M views · 4 years ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+              <div class="thumbnail-row">
+              <img class="thumbnails" src="thumbnails/thumbnail-9.webp" />
+            <div class="video-time">13:17</div>
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-9.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        The Secret to Super Human powers
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnails" src="thumbnails/thumbnail-10.webp" />
+            <div class="video-time">7:53</div>
+        </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-10.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">How The Word Largest c</p>
+                    <p>Markiplier</p>
+                    <p>19M views · 4 years ago</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-preview">
+            <div class="thumbnail-row">
+             <img class="thumbnails" src="thumbnails/thumbnail-11.webp" />
+            <div class="video-time">4:10</div>   
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-11.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">
+                        Dubai's Crasy UnderWater Train 
+                    </p>
+                    <p>Marques Brownlee</p>
+                    <p>3.4M views · 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+             <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/thumbnail-12.webp" />
+            <div class="video-time">4:51</div>
+             </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="channel-pictures/channel-12.jpeg" />
+                </div>
+                <div class="video-info">
+                    <p class="video-title-brendan">What Would Happen If You Don't Drink Water</p>
+                    <p>Markiplier</p>
+                    <p>19M views · 4 years ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

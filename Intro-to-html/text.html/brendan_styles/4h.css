@@ -7,9 +7,9 @@
 .pagination button {
   text-decoration: none;
   color: black;
-  padding: 8px 12px;        /* inner spacing */
-  margin: 0 3px;            /* space between */
-  border: 1px solid #ccc;   /* outline */
+  padding: 8px 12px;      
+  margin: 0 3px;          
+  border: 1px solid #ccc;   
   background: white;
   cursor: pointer;
 }
@@ -22,14 +22,14 @@
   background: green;
   color: white;
   border: none;
-  padding: 10px 20px;      /* vertical & horizontal padding */
+  padding: 10px 20px;      
   font-size: 16px;
   cursor: pointer;
   transition: padding 0.3s ease;
 }
 
 .stretch-btn:hover {
-  padding: 20px 40px;      /* grows when hovered */
+  padding: 20px 40px;     
 }
 .shadow-btn {
   background: green;
@@ -38,11 +38,11 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 5px 0 darkgreen;    /* creates depth */
+  box-shadow: 0 5px 0 darkgreen;    
   transition: all 0.1s ease;
 }
 
 .shadow-btn:active {
-  box-shadow: 0 2px 0 darkgreen;    /* moves “down” */
-  transform: translateY(3px);       /* simulates click */
+  box-shadow: 0 2px 0 darkgreen;  
+  transform: translateY(3px);       
 }

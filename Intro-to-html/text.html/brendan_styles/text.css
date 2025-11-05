@@ -1,4 +1,4 @@
-/* General page style */
+
 body {
   background: black;
   color: white;
@@ -11,7 +11,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Common box style */
+
 .box {
   background: white;
   color: black;
@@ -20,7 +20,7 @@ h1 {
   width: 300px;
 }
 
-/* 5a — Tahoma */
+
 .box5a p {
   font-family: Tahoma, sans-serif;
   font-weight: bold;
@@ -28,7 +28,7 @@ h1 {
   margin: 0;
 }
 
-/* 5b — Arial headline with red sub-text */
+
 .box5b h2 {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -42,7 +42,7 @@ h1 {
   margin: 0;
 }
 
-/* 5c — Verdana course card */
+
 .box5c {
   font-family: Verdana, sans-serif;
 }
@@ -68,7 +68,7 @@ h1 {
   cursor: pointer;
 }
 
-/* 5d — Arial headline with blue link */
+
 .box5d h2 {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -101,7 +101,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Common card style */
+
 .card {
   background: white;
   color: black;
@@ -111,7 +111,6 @@ body {
   border-radius: 4px;
 }
 
-/* 5e – MacBook */
 .card5e {
   text-align: center;
 }
@@ -144,7 +143,7 @@ body {
   cursor: pointer;
 }
 
-/* 5f – Stock info */
+
 .card5f {
   font-size: 14px;
   line-height: 1.4;
@@ -173,7 +172,6 @@ body {
   color: red;
 }
 
-/* 5g – Tweet-style */
 .card5g {
   font-size: 14px;
   line-height: 1.4;
@@ -190,5 +188,5 @@ body {
   margin-left: 4px;
 }
 .card5g .mention {
-  color: rgb(29, 155, 240); /* Twitter blue */
+  color: rgb(29, 155, 240); 
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation List Design</title>
+    <style>
+      .box {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.nav-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px; 
+    margin: 50px;
+    padding: 10px 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none; 
+    padding: 0;
+}
+
+.nav-item {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 15px; 
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5; 
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 999px; 
+    min-width: 28px; 
+    height: 28px;
+    padding: 0 8px; 
+}
+    </style>
+</head>
+<body>
+
+    <div class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item">
+                Home
+                <span class="badge">14</span>
+            </li>
+            <li class="nav-item">
+                Notifications
+                <span class="badge">3</span>
+            </li>
+            <li class="nav-item">
+                Messages
+                <span class="badge">5</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

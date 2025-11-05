@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13b</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      width: 500px;
+      height: 150px;
+      border: 2px solid white;
+    }
+
+  
+    .left-box {
+      background-color: pink;
+      width: 100px;
+      height: 100%;
+    }
+
+    
+    .right-box {
+      background-color: lightblue;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    
+    .row{
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      width: fit-content;
+      align-items: flex-end;
+    }
+    
+
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-box"></div>
+
+    <div class="right-box">
+      <div class="left-side">
+        <div class="row">row1</div>
+        <div class="row">row2</div>
+      </div>
+      <div class="row">row2</div>
+    </div>
+  </div>
+</body>
+</html>

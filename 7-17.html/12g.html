@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile List Design</title>
+    <style>
+      * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.profile-list {
+    list-style: none;
+    padding: 0;
+    width: 400px;
+    margin: 50px auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.profile-item {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; 
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.2;
+}
+
+.status {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.2;
+}
+
+.follow-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; 
+    transition: background-color 0.2s;
+}
+
+.follow-btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+
+    <ul class="profile-list">
+        
+        <li class="profile-item">
+            <img src="../thumbnails/Pin.jpg" alt="Oliver's Profile Picture" class="profile-img">
+            <div class="profile-text">
+                <span class="name">oliver</span>
+                <span class="description">the cat</span>
+                <span class="status">Popular</span>
+            </div>
+            <button class="follow-btn">Follow</button>
+        </li>
+
+        <li class="profile-item">
+            <img src="../thumbnails/Pin.jpg" alt="Mimi's Profile Picture" class="profile-img">
+            <div class="profile-text">
+                <span class="name">Mimi</span>
+                <span class="description">Sleepy Cat</span>
+                <span class="status">Popular</span>
+            </div>
+            <button class="follow-btn">Follow</button>
+        </li>
+
+        <li class="profile-item">
+            <img src="../thumbnails/bre.jpg" alt="Brendan Profile Picture" class="profile-img">
+            <div class="profile-text"></div>
+                <span class="name">Brendan</span>
+                <span class="description"> Dan techonoliges</span>
+                <span class="status">Popular</span>
+            </div>
+            <button class="follow-btn">Follow</button>
+        </li>
+
+    </ul>
+
+</body>
+</html>

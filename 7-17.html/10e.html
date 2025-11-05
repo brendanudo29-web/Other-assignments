@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      
+    .box {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+   .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 700px;
+    margin: 50px auto; 
+    padding: 10px;
+    align-items: center; 
+}
+
+.profile-card {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    display: block; 
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mutual-friends {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 15px;
+}
+
+.friend-icon {
+    width: 20px; 
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%; 
+}
+
+.add-friend-btn {
+    background-color:  rgb(29, 155, 240); 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%; 
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.add-friend-btn:hover {
+    background-color: rgb(29, 155, 240);
+}
+    </style>
+    
+    
+</head>
+<body>
+
+    <div class="profile-grid">
+        
+        <div class="profile-card">
+            <img src="../thumbnails/Pin.jpg" alt="Oliver the cat" class="profile-img">
+            <p class="name">Oliver</p>
+            <div class="mutual-friends">
+                <img src="../thumbnails/Pin.jpg" alt="Mutual friends icon" class="friend-icon">
+                <span>2 mutual friends</span>
+            </div>
+            <button class="add-friend-btn">Add Friend</button>
+        </div>
+
+        <div class="profile-card">
+            <img src="../thumbnails/Pin.jpg" alt="Mimi the cat" class="profile-img">
+            <p class="name">Mimi</p>
+            <div class="mutual-friends">
+                <img src="../thumbnails/Pin.jpg" alt="Mutual friends icon" class="friend-icon">
+                <span>3 mutual friends</span>
+            </div>
+            <button class="add-friend-btn">Add Friend</button>
+        </div>
+
+        <div class="profile-card">
+            <img src="../thumbnails/bre.jpg" alt="brendan the boy" class="profile-img">
+            <p class="name">brendan</p>
+            <div class="mutual-friends">
+                <img src="../thumbnails/bre.jpg" alt="Mutual friends icon" class="friend-icon">
+                <span>4 mutual friends</span>
+            </div>
+            <button class="add-friend-btn">Add Friend</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

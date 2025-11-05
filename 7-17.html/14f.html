@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 f</title>
+  <style>
+    .discord-sidebar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    display: flex;
+    width: 300px;
+}
+
+.server-list {
+    background-color: #202225; 
+    padding: 10px 0;
+}
+
+.channel-info {
+    background-color: #2f3136; 
+    padding: 10px;
+    flex-grow: 1; 
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="discord-sidebar">
+    <nav class="server-list">
+        <div class="server-icon"></div>
+        <div class="server-icon"></div>
+        <div class="server-icon"></div>
+    </nav>
+    <nav class="channel-info">
+        <h3>INFO</h3>
+        <ul>
+            <li># new-videos</li>
+            <li># updates</li>
+            <li># faq</li>
+        </ul>
+    </nav>
+</div>
+<div style="margin-left: 300px; height: 1500px;">Page Content goes here, to the right of the sidebar.</div>
+</body>
+</html>

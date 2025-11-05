@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Inbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .inbox {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    .email-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .email-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .email-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .sender {
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    .subject {
+      font-size: 0.9em;
+    }
+
+    .preview {
+      font-size: 0.85em;
+      color: #777;
+    }
+
+    .time {
+      font-size: 0.8em;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    h4 {
+      margin-bottom: 10px;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="inbox">
+    <h4>ALL INBOXES</h4>
+
+    <div class="email-item">
+      <img src="../thumbnails/Pin.jpg" class="avatar">
+      <div class="email-content">
+        <div class="sender">Chewy Promotions</div>
+        <div class="subject">Biggest sales of the year!</div>
+        <div class="preview">Hey there! We're writing to tell you about our...</div>
+      </div>
+      <div class="time">4:58 PM</div>
+    </div>
+
+    <div class="email-item">
+      <img src="../thumbnails/thumbnail-2.webp" class="avatar">
+      <div class="email-content">
+        <div class="sender">Best Buy</div>
+        <div class="subject">Your Best Buy eReceipt</div>
+        <div class="preview">Thank you for shopping at Best Buy, here is...</div>
+      </div>
+      <div class="time">12:32 PM</div>
+    </div>
+
+    <div class="email-item">
+      <img src="../thumbnails/thumbnail-3.webp" class="avatar">
+      <div class="email-content">
+        <div class="sender">Netflix</div>
+        <div class="subject">Here’s what’s coming soon to Netflix</div>
+        <div class="preview">Brand new movies and shows, old favorites...</div>
+      </div>
+      <div class="time">9:00 AM</div>
+    </div>
+
+  </div>
+</body>
+</html>

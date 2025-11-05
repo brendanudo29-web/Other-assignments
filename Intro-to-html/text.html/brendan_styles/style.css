@@ -1,4 +1,4 @@
-/* Center everything on the page */
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,13 +9,12 @@ body {
   gap: 40px;
 }
 
-/* Group container */
 .button-group {
   display: flex;
-  gap: 10px;             /* space between buttons */
-}
+  gap: 10px;  
+}           
 
-/* Base button style */
+
 .btn {
   padding: 10px 20px;
   border-radius: 6px;
@@ -26,18 +25,18 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Primary button (filled color) */
+
 .btn.primary {
-  background-color: #5a3ec8;       /* purple for first example */
+  background-color: #5a3ec8;       
   color: white;
   border-color: #5a3ec8;
 }
 
 .btn.primary:hover {
-  background-color: #4a32a3;       /* slightly darker on hover */
+  background-color: #4a32a3;       
 }
 
-/* Secondary button (outline style) */
+
 .btn.secondary {
   background-color: white;
   color: #5a3ec8;
@@ -48,9 +47,9 @@ body {
   background-color: #f5f5f5;
 }
 
-/* Second set (blue version) */
+
 .button-group:nth-of-type(2) .btn.primary {
-  background-color: #1976d2;       /* blue for second example */
+  background-color: #1976d2;       
   border-color: #1976d2;
 }
 
@@ -66,58 +65,56 @@ body {
 .button-group:nth-of-type(2) .btn.secondary:hover {
   background-color: #f5f5f5;
 }
-/* Yellow "Add to Cart" button */
+
 .btn.add-to-cart {
-  background-color: #ffcc33;     /* bright yellow */
-  color: #000;                   /* black text */
-  border: none;                  /* no border */
-  border-radius: 20px;           /* rounded pill shape */
-  padding: 10px 30px;            /* vertical & horizontal padding */
+  background-color: #ffcc33;    
+  color: #000;                   
+  border: none;                  
+  border-radius: 20px;           
+  padding: 10px 30px;            
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect */
+
 .btn.add-to-cart:hover {
-  background-color: #ffb700;     /* slightly darker yellow on hover */
-}
-/* Green "Sign up" button */
+  background-color: #ffb700;    
+
 .btn.sign-up {
-  background-color: #28a745;   /* green background */
-  color: white;                /* white text */
-  border: none;                /* no border */
-  border-radius: 6px;          /* slightly rounded corners */
-  padding: 8px 20px;           /* vertical and horizontal padding */
+  background-color: green;   
+  color: white;               
+  border: none;               
+  border-radius: 6px;         
+  padding: 8px 20px;           
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect */
+
 .btn.sign-up:hover {
-  background-color: #218838;   /* slightly darker green on hover */
+  background-color: green;  
 }
-/* Black "Request now" button */
+
 .btn.request-now {
-  background-color: #000;       /* black background */
-  color: #fff;                  /* white text */
-  border: none;                 /* no border */
-  border-radius: 4px;           /* slight rounded corners */
-  padding: 10px 25px;           /* size of button */
+  background-color:black;      
+  color: white;                  
+  border: none;                 
+  border-radius: 4px;           
+  padding: 10px 25px;           
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
 .btn.request-now:hover {
-  background-color: #333;       /* lighter black on hover */
+  background-color: #333;      
 }
-/* General page style (for demo) */
+/
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -127,7 +124,6 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Product card container */
 .product-card {
   background: white;
   padding: 20px;
@@ -136,9 +132,9 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Back link */
+
 .back-link {
-  color: rgb(0, 113, 133);       /* Blue link */
+  color: rgb(0, 113, 133);       
   text-decoration: none;
   font-size: 14px;
 }
@@ -147,31 +143,30 @@ body {
   text-decoration: underline;
 }
 
-/* Product title */
+
 .product-title {
   font-size: 22px;
   font-weight: bold;
   margin: 10px 0;
 }
 
-/* Price & stock info */
 .price {
   font-size: 18px;
   margin: 5px 0;
 }
 
 .in-stock {
-  color: rgb(0, 118, 0);         /* Green in-stock text */
+  color: rgb(0, 118, 0);         
   font-weight: bold;
 }
 
-/* Delivery info */
+
 .delivery {
   font-size: 14px;
   margin-bottom: 15px;
 }
 
-/* Buttons */
+
 .button-group {
   display: flex;
   gap: 10px;
@@ -187,7 +182,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Add to Cart button */
+
 .btn.add-to-cart {
   background-color: rgb(255, 216, 20);
   color: black;
@@ -197,7 +192,6 @@ body {
   background-color: rgb(245, 205, 3);
 }
 
-/* Buy Now button */
 .btn.buy-now {
   background-color: rgb(255, 164, 28);
   color: black;
@@ -207,8 +201,8 @@ body {
   background-color: rgb(250, 140, 0);
 }
     .button-group {
-        display: flex; /* Or display: inline-block; */
-        gap: 10px; /* Adds space between buttons */
+        display: flex; 
+        gap: 10px; 
     }.pagination {
   display: inline-block;
 }
@@ -217,29 +211,29 @@ body {
 .pagination button {
   text-decoration: none;
   color: black;
-  padding: 8px 12px;        /* inner spacing */
-  margin: 0 3px;            /* space between */
-  border: 1px solid #ccc;   /* outline */
+  padding: 8px 12px;      
+  margin: 0 3px;            
+  border: 1px solid white;   
   background: white;
   cursor: pointer;
 }
 
 .pagination a:hover,
 .pagination button:hover {
-  background: #eee;
+  background: white;
 }
 .stretch-btn {
   background: green;
   color: white;
   border: none;
-  padding: 10px 20px;      /* vertical & horizontal padding */
+  padding: 10px 20px;      
   font-size: 16px;
   cursor: pointer;
   transition: padding 0.3s ease;
 }
 
 .stretch-btn:hover {
-  padding: 20px 40px;      /* grows when hovered */
+  padding: 20px 40px;     
 }
 .shadow-btn {
   background: green;
@@ -248,8 +242,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 5px 0 darkgreen;    /* creates depth */
+  box-shadow: 0 5px 0 darkgreen;   
   transition: all 0.1s ease;
 }
-
 
