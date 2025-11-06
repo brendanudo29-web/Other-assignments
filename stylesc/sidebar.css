@@ -4,7 +4,8 @@
   bottom: 0;
   top: 55px;
   background-color:white ;
-  width: 72px
+  width: 72px;
+  z-index: index 200;
 }
   .sidebar-link {
     height: 76px; 
@@ -14,19 +15,24 @@
     align-items: center; 
     cursor: pointer;
   text-transform: capitalize; 
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
+  transition: background-color 0.2s ease;
 }
  .sidebar-link:hover {
-  background-color:rgb(235, 235, 235);
+  background-color:rgb(240, 240, 240);
  }
  .sidebar-link img{
 height: 24px;
 margin-bottom: 5px;
 display: block;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
+
+
 .sidebar-link div{
-  font-family: Roboto,Arial ;
-  font: size 10px; 
-  flex-direction: column;
+  font-family: Roboto,Arial,sans-serif ;
+  font-size: 10px; 
+
 }

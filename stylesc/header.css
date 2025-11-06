@@ -8,8 +8,10 @@
     background-color: white;
     border-bottom: 1px solid rgb(228, 228, 228);
     z-index: 100;
-    justify-content: space-between;
+    justify-content: space-between; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 
 .left-section {
     display: flex;
@@ -52,20 +54,25 @@
     background-color:rgb(240, 240, 240);
      border-width: 1px;
     border-style: solid;
-    border-color: rgb(192, 192, 192,);
+    border-color: rgb(192, 192, 192);
     margin-left: -1px;
     margin-right: 10px;
     position: relative;
 }
 .search-button,
-.voice-search-button{
+.voice-search-button,
+ .upload-icon-container{
 display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
 }
 .search-button .tooltip,
-.voice-search-button .tooltip{
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+ .youtube-apps-container .tooltip,
+ .notifications-icons-container .tooltip{
+    font-family: Roboto, Arial;
     position:absolute;
     background-color: grey;
     color: white;
@@ -82,7 +89,10 @@ position: relative;
  white-space: nowrap;
 }
 .search-button:hover .tooltip,
-.voice-search-button:hover .tooltip{ 
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+ .youtube-apps-container:hover .tooltip,
+ .notifications-icons-container:hover .tooltip{ 
     opacity: 1;
 }
 .search-icon{
@@ -118,9 +128,10 @@ position: relative;
 .notifications{
 height: 24px;
 }
-.notifications-icons-contianer{
-    position:relative;
-   }
+   .notifications-icons-container {
+    position: relative;
+}
+
 .notifications-count{
      position:absolute;
     top: -2px;
@@ -138,4 +149,29 @@ height: 24px;
 .dan{
     height: 32px;
     border-radius: 16px;
+}
+.profile-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-container .tooltip {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: rgba(60, 60, 60, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.profile-icon-container:hover .tooltip {
+  opacity: 1;
 }
