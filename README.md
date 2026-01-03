@@ -38,7 +38,6 @@ It serves as a central place where people can view my work and track my growth i
 ### Technologies
 - HTML5  
 - CSS3  
-- JavaScript (basic interactions)
 
 ---
 
