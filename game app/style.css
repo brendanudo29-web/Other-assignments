@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0d1f33, #050b14);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: black;
+  border: 2px solid cyan;
+}
+
+.info {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.overlay {
+  position: absolute;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  display: none;
+}
+
+.overlay button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
