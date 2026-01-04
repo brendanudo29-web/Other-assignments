@@ -140,4 +140,7 @@ function gameLoop() {
 }
 
 gameLoop();
+document.getElementById("left").ontouchstart = () => moveLeft();
+document.getElementById("right").ontouchstart = () => moveRight();
+document.getElementById("dodge").ontouchstart = () => dodge();
 
