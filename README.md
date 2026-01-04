@@ -6,8 +6,31 @@ I enjoy building projects that combine creativity, storytelling, and code, and I
 This GitHub contains my learning projects and portfolio, created as part of my preparation for scholarships and future opportunities in technology and game development.
 
 ---
+# My Awesome Game
 
-## 🎮 Project 1:  Brendan Shadow Realm – Game Landing Page
+## Description
+Hi! I’m **Unogu Brendan**. This is a fun, fast-paced action game where you move, dodge attacks, and collect points. Built with **HTML, CSS, and JavaScript**, it works on both desktop and mobile.
+
+---
+
+## How to Play
+- **Move:** Arrow keys or WASD  
+- **Dodge:** Shift key  
+- Open `index.html` in your browser to play!
+
+---
+
+## Technologies Used
+- HTML  
+- CSS  
+- JavaScript
+
+---
+
+## Credits
+Developed by **Unogu Brendan**
+
+## 🎮 Project 2:  Brendan Shadow Realm – Game Landing Page
 
  Brendan Shadow Realm is a fictional dark-fantasy game landing page built using HTML and CSS.  
 The project simulates how real game studios present their games online, focusing on theme, layout, and visual storytelling.
@@ -24,7 +47,7 @@ The project simulates how real game studios present their games online, focusing
 
 ---
 
-## 🌐 Project 2: Personal Portfolio Website
+## 🌐 Project 3: Personal Portfolio Website
 
 This is my **personal portfolio website**, created to showcase my projects, skills, and learning journey as a developer.  
 It serves as a central place where people can view my work and track my growth in programming.
@@ -41,7 +64,7 @@ It serves as a central place where people can view my work and track my growth i
 
 ---
 
-## ▶️ Project 3: YouTube Clone
+## ▶️ Project 4: YouTube Clone
 
 This project is a **front-end YouTube clone** built to practice layout design and UI structure similar to a real-world platform.  
 It focuses on recreating the look and feel of YouTube using modern web design techniques.
