@@ -13,6 +13,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow: hidden;
+  touch-action: none;
 }
 
 h1 {
@@ -44,16 +46,30 @@ canvas {
   font-size: 16px;
   cursor: pointer;
 }
+
+/* HIDDEN BY DEFAULT (DESKTOP) */
 .mobile-controls {
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
+  display: none;
 }
 
-button {
-  font-size: 18px;
-  padding: 15px;
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+  .mobile-controls {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 9999;
+  }
+
+  .mobile-controls button {
+    font-size: 18px;
+    padding: 16px 22px;
+    border-radius: 12px;
+    border: none;
+    background: #222;
+    color: white;
+  }
 }

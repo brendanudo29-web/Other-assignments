@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🚀  Brendan Space Dodger</title>
+  <title>🚀 Brendan Space Dodger</title>
+
+  <!-- REQUIRED for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,13 +25,14 @@
     <p>Your Score: <span id="finalScore"></span></p>
     <button id="restartBtn">Restart</button>
   </div>
-<div class="mobile-controls">
-  <button id="left">⬅️</button>
-  <button id="right">➡️</button>
-  <button id="dodge">Dodge</button>
-</div>
+
+  <!-- MOBILE CONTROLS (mobile only) -->
+  <div class="mobile-controls">
+    <button id="left">⬅️</button>
+    <button id="right">➡️</button>
+    <button id="dodge">Dodge</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-

@@ -9,7 +9,7 @@ const gameOverScreen = document.getElementById("gameOverScreen");
 const finalScoreEl = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
 
-// High score storage
+// High score
 let highScore = localStorage.getItem("spaceHighScore") || 0;
 highScoreEl.textContent = highScore;
 
@@ -17,7 +17,7 @@ highScoreEl.textContent = highScore;
 let gameRunning = true;
 let score = 0;
 
-// Player object
+// Player
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 50,
@@ -53,18 +53,16 @@ function drawPlayer() {
 // Draw asteroids
 function drawAsteroids() {
   ctx.fillStyle = "red";
-  asteroids.forEach(a => {
-    ctx.fillRect(a.x, a.y, a.size, a.size);
-  });
+  asteroids.forEach(a => ctx.fillRect(a.x, a.y, a.size, a.size));
 }
 
-// Move asteroids
+// Update asteroids
 function updateAsteroids() {
   asteroids.forEach(a => a.y += a.speed);
   asteroids = asteroids.filter(a => a.y < canvas.height + 40);
 }
 
-// Collision detection
+// Collision
 function checkCollision() {
   asteroids.forEach(a => {
     if (
@@ -89,7 +87,7 @@ function endGame() {
   }
 }
 
-// Restart game
+// Restart
 function restartGame() {
   asteroids = [];
   score = 0;
@@ -103,7 +101,7 @@ function restartGame() {
 
 restartBtn.addEventListener("click", restartGame);
 
-// Player movement
+// Keyboard movement (desktop)
 const keys = {};
 window.addEventListener("keydown", e => keys[e.key] = true);
 window.addEventListener("keyup", e => keys[e.key] = false);
@@ -114,7 +112,38 @@ function movePlayer() {
     player.x += player.speed;
 }
 
-// Main game loop
+// MOBILE CONTROL FUNCTIONS
+function moveLeft() {
+  if (player.x > 0) player.x -= player.speed * 2;
+}
+
+function moveRight() {
+  if (player.x < canvas.width - player.width)
+    player.x += player.speed * 2;
+}
+
+function dodge() {
+  player.x += (Math.random() > 0.5 ? 1 : -1) * 60;
+}
+
+// Bind mobile buttons
+function bindButton(id, action) {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+
+  btn.addEventListener("touchstart", e => {
+    e.preventDefault();
+    action();
+  });
+
+  btn.addEventListener("click", action);
+}
+
+bindButton("left", moveLeft);
+bindButton("right", moveRight);
+bindButton("dodge", dodge);
+
+// Game loop
 function gameLoop() {
   if (!gameRunning) return;
 
@@ -140,7 +169,3 @@ function gameLoop() {
 }
 
 gameLoop();
-document.getElementById("left").ontouchstart = () => moveLeft();
-document.getElementById("right").ontouchstart = () => moveRight();
-document.getElementById("dodge").ontouchstart = () => dodge();
-
