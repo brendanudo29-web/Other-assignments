@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🚀 Brendan Space Dodger</title>
-
-  <!-- REQUIRED for mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🚀 Brendan Space Dodger</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🚀 Brendan Space Dodger</h1>
-  
-<canvas id="game" width="360" height="520"></canvas>
+    <h1>🚀Brendan Space Dodger</h1>
+    
+    <div id="game-wrapper">
+        <canvas id="game" width="360" height="520"></canvas>
+        
+        <div class="overlay" id="gameOverScreen">
+            <h2 style="color: red;">MISSION FAILED</h2>
+            <p style="margin: 10px 0;">Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">RETRY</button>
+        </div>
+    </div>
 
+    <div class="info">
+        Score: <span id="score">0</span> | High: <span id="highScore">0</span>
+    </div>
 
-  <div class="info">
-    Score: <span id="score">0</span> |
-    High Score: <span id="highScore">0</span>
-  </div>
+    <div class="mobile-controls">
+        <div class="btn" id="leftBtn">⬅️</div>
+        <div class="btn" id="dodgeBtn">⚡</div>
+        <div class="btn" id="rightBtn">➡️</div>
+    </div>
 
-  <div class="overlay" id="gameOverScreen">
-    <h2>GAME OVER</h2>
-    <p>Your Score: <span id="finalScore"></span></p>
-    <button id="restartBtn">Restart</button>
-  </div>
+    <audio id="sound-bg" src="bg-music.mp3" loop></audio>
+    <audio id="sound-fail" src="fail.mp3"></audio>
 
-  <!-- MOBILE CONTROLS (mobile only) -->
-  <div class="mobile-controls">
-    <button id="left">⬅️</button>
-    <button id="right">➡️</button>
-    <button id="dodge">Dodge</button>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

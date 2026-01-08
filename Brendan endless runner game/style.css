@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    touch-action: manipulation;
+}
+
+#game-container {
+    width: 95vw;
+    max-width: 600px;
+    height: 250px;
+    background: linear-gradient(#87ceeb, #e0f6ff); /* Sky Gradient */
+    border-bottom: 8px solid #333;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+/* Moving Background (Clouds/City) */
+#background-layer {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 30%, white 20px, transparent 21px),
+                      radial-gradient(circle at 50% 40%, white 35px, transparent 36px),
+                      radial-gradient(circle at 80% 25%, white 25px, transparent 26px);
+    background-size: 50% 100%;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* Background Animation */
+.bg-animate {
+    animation: scrollBG 10s infinite linear;
+}
+
+@keyframes scrollBG {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+#player {
+    width: 40px;
+    height: 40px;
+    background-color: #ff4757;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 #b33939; /* Add depth to player */
+    z-index: 2;
+}
+
+#obstacle {
+    width: 30px;
+    height: 50px;
+    background-color: #2f3542;
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#ui {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #222;
+    font-weight: 900;
+    text-shadow: 1px 1px 0 #fff;
+    z-index: 4;
+}
+
+#message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 20px 0;
+    z-index: 10;
+}
+
+/* Jump Animation */
+.animate-jump {
+    animation: jump 0.5s ease-out;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    40% { bottom: 130px; }
+    60% { bottom: 130px; }
+    100% { bottom: 0; }
+}
+
+/* Obstacle Animation */
+.obstacle-move {
+    animation: move linear infinite;
+}
+
+@keyframes move {
+    0% { left: 100%; }
+    100% { left: -60px; }
+}

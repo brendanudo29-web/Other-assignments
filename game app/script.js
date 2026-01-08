@@ -1,171 +1,168 @@
-// Canvas setup
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
-
-// UI elements
 const scoreEl = document.getElementById("score");
 const highScoreEl = document.getElementById("highScore");
 const gameOverScreen = document.getElementById("gameOverScreen");
 const finalScoreEl = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
 
-// High score
+const bgMusic = document.getElementById("sound-bg");
+const failSound = document.getElementById("sound-fail");
+
+let gameRunning = true;
+let score = 0;
+let asteroids = [];
+let stars = [];
+let asteroidTimer = 0;
+let asteroidInterval = 45;
+
 let highScore = localStorage.getItem("spaceHighScore") || 0;
 highScoreEl.textContent = highScore;
 
-// Game state
-let gameRunning = true;
-let score = 0;
-
-// Player
 const player = {
-  x: canvas.width / 2 - 20,
-  y: canvas.height - 50,
-  width: 40,
-  height: 40,
-  speed: 6
+    x: canvas.width / 2 - 15,
+    y: canvas.height - 80,
+    w: 30,
+    h: 30,
+    speed: 7
 };
 
-// Asteroids
-let asteroids = [];
-let asteroidTimer = 0;
-let asteroidInterval = 60;
+// Create Starfield
+for (let i = 0; i < 60; i++) {
+    stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2,
+        speed: Math.random() * 3 + 1
+    });
+}
 
-// Create asteroid
 function createAsteroid() {
-  asteroids.push({
-    x: Math.random() * (canvas.width - 30),
-    y: -30,
-    size: 30,
-    speed: 3 + score / 500
-  });
+    asteroids.push({
+        x: Math.random() * (canvas.width - 30),
+        y: -50,
+        size: Math.random() * 20 + 20,
+        speed: 3.5 + (score / 1200)
+    });
 }
 
-// Draw player
+function drawBackground() {
+    ctx.fillStyle = "white";
+    stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.fill();
+        s.y += s.speed;
+        if (s.y > canvas.height) s.y = 0;
+    });
+}
+
 function drawPlayer() {
-  ctx.fillStyle = "lime";
-  ctx.shadowBlur = 15;
-  ctx.shadowColor = "lime";
-  ctx.fillRect(player.x, player.y, player.width, player.height);
-  ctx.shadowBlur = 0;
+    ctx.fillStyle = "lime";
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = "lime";
+    ctx.beginPath();
+    ctx.moveTo(player.x + player.w/2, player.y);
+    ctx.lineTo(player.x, player.y + player.h);
+    ctx.lineTo(player.x + player.w, player.y + player.h);
+    ctx.closePath();
+    ctx.fill();
+    ctx.shadowBlur = 0;
 }
 
-// Draw asteroids
 function drawAsteroids() {
-  ctx.fillStyle = "red";
-  asteroids.forEach(a => ctx.fillRect(a.x, a.y, a.size, a.size));
+    ctx.fillStyle = "#ff4757";
+    asteroids.forEach(a => {
+        ctx.beginPath();
+        ctx.arc(a.x + a.size/2, a.y + a.size/2, a.size/2, 0, Math.PI * 2);
+        ctx.fill();
+    });
 }
 
-// Update asteroids
-function updateAsteroids() {
-  asteroids.forEach(a => a.y += a.speed);
-  asteroids = asteroids.filter(a => a.y < canvas.height + 40);
-}
-
-// Collision
 function checkCollision() {
-  asteroids.forEach(a => {
-    if (
-      player.x < a.x + a.size &&
-      player.x + player.width > a.x &&
-      player.y < a.y + a.size &&
-      player.y + player.height > a.y
-    ) {
-      endGame();
-    }
-  });
+    asteroids.forEach(a => {
+        if (
+            player.x < a.x + a.size - 6 &&
+            player.x + player.w > a.x + 6 &&
+            player.y < a.y + a.size - 6 &&
+            player.y + player.h > a.y + 6
+        ) {
+            endGame();
+        }
+    });
 }
 
-// End game
 function endGame() {
-  gameRunning = false;
-  gameOverScreen.style.display = "block";
-  finalScoreEl.textContent = score;
+    gameRunning = false;
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    failSound.play();
 
-  if (score > highScore) {
-    localStorage.setItem("spaceHighScore", score);
-  }
+    gameOverScreen.style.display = "block";
+    let final = Math.floor(score / 10);
+    finalScoreEl.textContent = final;
+    if (final > highScore) {
+        localStorage.setItem("spaceHighScore", final);
+        highScoreEl.textContent = final;
+    }
 }
 
-// Restart
 function restartGame() {
-  asteroids = [];
-  score = 0;
-  player.x = canvas.width / 2 - 20;
-  gameRunning = true;
-  gameOverScreen.style.display = "none";
-  highScore = localStorage.getItem("spaceHighScore") || 0;
-  highScoreEl.textContent = highScore;
-  requestAnimationFrame(gameLoop);
+    asteroids = [];
+    score = 0;
+    player.x = canvas.width / 2 - 15;
+    gameRunning = true;
+    gameOverScreen.style.display = "none";
+    bgMusic.play();
+    requestAnimationFrame(gameLoop);
 }
+
+function initMusic() {
+    bgMusic.play();
+    window.removeEventListener('keydown', initMusic);
+    window.removeEventListener('touchstart', initMusic);
+}
+window.addEventListener('keydown', initMusic);
+window.addEventListener('touchstart', initMusic);
 
 restartBtn.addEventListener("click", restartGame);
 
-// Keyboard movement (desktop)
 const keys = {};
 window.addEventListener("keydown", e => keys[e.key] = true);
 window.addEventListener("keyup", e => keys[e.key] = false);
 
-function movePlayer() {
-  if (keys["ArrowLeft"] && player.x > 0) player.x -= player.speed;
-  if (keys["ArrowRight"] && player.x < canvas.width - player.width)
-    player.x += player.speed;
+function handleInput() {
+    if ((keys["ArrowLeft"] || keys["a"]) && player.x > 0) player.x -= player.speed;
+    if ((keys["ArrowRight"] || keys["d"]) && player.x < canvas.width - player.w) player.x += player.speed;
 }
 
-// MOBILE CONTROL FUNCTIONS
-function moveLeft() {
-  if (player.x > 0) player.x -= player.speed * 2;
-}
+document.getElementById("leftBtn").ontouchstart = (e) => { e.preventDefault(); if(player.x > 0) player.x -= 40; };
+document.getElementById("rightBtn").ontouchstart = (e) => { e.preventDefault(); if(player.x < canvas.width - player.w) player.x += 40; };
+document.getElementById("dodgeBtn").ontouchstart = (e) => { e.preventDefault(); player.x = Math.random() * (canvas.width - player.w); };
 
-function moveRight() {
-  if (player.x < canvas.width - player.width)
-    player.x += player.speed * 2;
-}
-
-function dodge() {
-  player.x += (Math.random() > 0.5 ? 1 : -1) * 60;
-}
-
-// Bind mobile buttons
-function bindButton(id, action) {
-  const btn = document.getElementById(id);
-  if (!btn) return;
-
-  btn.addEventListener("touchstart", e => {
-    e.preventDefault();
-    action();
-  });
-
-  btn.addEventListener("click", action);
-}
-
-bindButton("left", moveLeft);
-bindButton("right", moveRight);
-bindButton("dodge", dodge);
-
-// Game loop
 function gameLoop() {
-  if (!gameRunning) return;
+    if (!gameRunning) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground();
+    handleInput();
+    drawPlayer();
 
-  movePlayer();
-  drawPlayer();
+    asteroidTimer++;
+    if (asteroidTimer > asteroidInterval) {
+        createAsteroid();
+        asteroidTimer = 0;
+    }
 
-  asteroidTimer++;
-  if (asteroidTimer > asteroidInterval) {
-    createAsteroid();
-    asteroidTimer = 0;
-  }
+    asteroids.forEach(a => a.y += a.speed);
+    asteroids = asteroids.filter(a => a.y < canvas.height + 50);
 
-  updateAsteroids();
-  drawAsteroids();
-  checkCollision();
+    drawAsteroids();
+    checkCollision();
 
-  score++;
-  scoreEl.textContent = score;
-
-  requestAnimationFrame(gameLoop);
+    score++;
+    scoreEl.textContent = Math.floor(score / 10);
+    requestAnimationFrame(gameLoop);
 }
 
 gameLoop();

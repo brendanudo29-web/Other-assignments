@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> Brendan Endless Runner Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="background-layer"></div>
+        
+        <div id="ui">
+            Score: <span id="current-score">0</span> | 
+            High: <span id="high-score">0</span>
+        </div>
+        
+        <div id="message">TAP OR SPACE TO START</div>
+        
+        <div id="player"></div>
+        <div id="obstacle"></div>
+    </div>
+
+    <audio id="sound-jump" src="sounds/start.mp3"></audio>
+    <audio id="sound-fail" src="sounds/fail.mp3"></audio>
+    <audio id="sound-bg" src="sounds/bg-music.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

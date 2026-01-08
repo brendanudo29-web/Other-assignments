@@ -1,78 +1,99 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0d1f33, #050b14);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  min-height: 100vh;
-  padding-top: 10px;
-
-  overflow: hidden;
-  touch-action: none;
+    background: #050b14;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: none;
 }
 
-
 h1 {
-  margin-bottom: 10px;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px cyan;
+}
+
+#game-wrapper {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 canvas {
-  background: black;
-  border: 2px solid cyan;
+    background: black;
+    border: 2px solid cyan;
+    display: block;
+    max-width: 95vw;
+    max-height: 65vh;
 }
 
 .info {
-  margin-top: 10px;
-  font-size: 18px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
 .overlay {
-  position: absolute;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 30px;
-  border-radius: 10px;
-  display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 30px;
+    border: 2px solid red;
+    border-radius: 15px;
+    display: none;
+    z-index: 100;
+    width: 260px;
 }
 
 .overlay button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* HIDDEN BY DEFAULT (DESKTOP) */
-.mobile-controls {
-  display: none;
-}
-
-/* MOBILE ONLY */
-@media (max-width: 768px) {
-  .mobile-controls {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 20px;
-    z-index: 9999;
-  }
-
-  .mobile-controls button {
-    font-size: 18px;
-    padding: 16px 22px;
-    border-radius: 12px;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: cyan;
     border: none;
-    background: #222;
-    color: white;
-  }
+    border-radius: 5px;
+    font-weight: bold;
 }
+
+.mobile-controls {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .mobile-controls { display: flex; }
+}
+
+.btn {
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid cyan;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.btn:active { background: cyan; }

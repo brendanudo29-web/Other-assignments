@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0d1f33, #050b14 70%);
+  color: #e6eef6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* BRENDAN NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 90px;
+  
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+.profile-picture{ 
+  width:40px;
+  height: 40px;
+  border-radius:60px;
+}
+nav a {
+  margin-left: 35px;
+  font-size: 14px;
+  color: #b7c6d8;
+  transition: 0.3s;
+}
+
+nav a:hover { color: #00c6ff; }
+
+/*  BRENDAN HERO */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+.glow {
+    font-size: 60px;
+    color: #5744ff;
+    text-shadow: 0px 0px 15px #167cff;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero h1 span { color: #00c6ff; }
+
+.hero h2 {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #a9bbce;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 18px auto 30px;
+  font-size: 14px;
+  color: #8fa3b8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  border: none;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #00c6ff;
+  border: 1px solid #00c6ff;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.socials a {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #8fa3b8;
+}
+
+.socials a:hover { color: #00c6ff; }
+
+.scroll {
+  position: absolute;
+  bottom: 25px;
+  font-size: 20px;
+  color: #00c6ff;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(6px)}
+}
+
+/* ABOUT BRENDAN */
+
+    body {
+      background: #0b1220;
+      color: #e5e7eb;
+    }
+
+    .about-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .about-title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .about-title h1 {
+      font-size: 36px;
+      color: #38bdf8;
+    }
+
+    .about-title p {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+      font-size: 15px;
+      color: #cbd5f5;
+      margin-bottom: 18px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feature-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 18px;
+      background: linear-gradient(145deg, #0f172a, #020617);
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .feature-text h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #f8fafc;
+    }
+
+    .feature-text p {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+/*  BRENDAN SKILLS */
+.skills {
+  padding: 80px 110px 100px;
+  background: rgba(255,255,255,0.02);
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #00c6ff;
+  margin-bottom: 10px;
+}
+
+.skills p {
+  text-align: center;
+  font-size: 13px;
+  color: #9fb1c4;
+  margin-bottom: 50px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.skill-box {
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.skill-box h4 { color:#00c6ff; margin-bottom:12px; font-size:14px; }
+
+.tags span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 6px 6px 0 0;
+  font-size: 11px;
+  border-radius: 20px;
+  background: rgba(0,198,255,0.15);
+  color: #bfeaff;
+}
+
+
+@media(max-width:1000px){
+  header{padding:25px 40px}
+  .about,.skills{padding:70px 40px}
+  .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:600px){
+  .skills-grid{grid-template-columns:1fr}
+}
+
+
+/*  BRENDAN PROJECTS */
+
+ 
+
+    body {
+      background: radial-gradient(circle at top, #0d1f33, #050b14 70%);
+      color: #e6eef6;
+    }
+
+    section#projects {
+      max-width: 1100px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    /* TITLE */
+    .projects-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .projects-header h2 {
+      font-size: 34px;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+
+    .projects-header p {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    
+    .project-card {
+      background: linear-gradient(145deg, #0b1220, #020617);
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 22px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(56, 189, 248, 0.18);
+    }
+
+    .project-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    .project-card p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
+
+    
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .project-tags span {
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #bfeaff;
+    }
+
+    
+    .project-links {
+      display: flex;
+      gap: 18px;
+      font-size: 12px;
+    }
+
+    .project-links a {
+      color: #cbd5f5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .project-links a:hover {
+      color: #38bdf8;
+    }
+
+    
+    @media (max-width: 800px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+/*  BRENDAN CONTACT INFO */
+.contact {
+  padding: 90px 110px 120px;
+  background: rgba(255,255,255,0.02);
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #00c6ff;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 13px;
+  color: #9fb1c4;
+  margin-bottom: 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 18px;
+  color: #b7c6d8;
+}
+
+.contact-info i {
+  color: #00c6ff;
+  margin-right: 10px;
+}
+
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  color: #e6eef6;
+  font-size: 13px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8fa3b8;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+/* BRENDAN FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 12px;
+  color: #7f93a8;
+}
+
+
+@media(max-width:900px){
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
