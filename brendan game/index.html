@@ -2,75 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shadow Realm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Brendan | Shadow Realm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <header>
-         <h1><img class="profile-picture" src="Brendan Shadow Realm.png"></h1>
-        <nav>
-            <a href="#story">Story</a>
-            <a href="#characters">Characters</a>
-            <a href="#levels">Levels</a>
+        <h1><img class="profile-picture" src="Brendan Shadow Realm.png" alt="Logo"></h1>
+        <nav class="desktop-nav">
+            <a href="#">Story</a>
+            <a href="#">Heroes</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero-section">
         <h2>Enter the Shadow Realm</h2>
-        <p>A dark fantasy adventure game where courage defines destiny.</p>
-        <button>Play Game</button>
+        <p>A dark fantasy adventure. Do you have the courage?</p>
+        <button id="start-btn">Begin Journey</button>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="section">
-        <h2>Game Story</h2>
-        <p>
-             Brendan Shadow Realm is a fantasy adventure game set in a world consumed by darkness.
-            Players must defeat enemies, solve puzzles, and restore balance to the realm.
-        </p>
-    </section>
-
-    <!-- Characters Section -->
-    <section id="characters" class="section">
-        <h2>Main Characters</h2>
-
+    <section id="selection-screen" class="hidden">
+        <h2 class="section-title">Select Your Hero</h2>
         <div class="cards">
-            <div class="card">
+            <div class="card char-select" onclick="chooseHero('brian')">
                 <h3>Brian</h3>
-                <p>The brave warrior with unmatched strength.</p>
+                <p>The Warrior</p>
+                <div class="stat-tag">🛡 High Defense</div>
             </div>
-
-            <div class="card">
+            <div class="card char-select" onclick="chooseHero('laura')">
                 <h3>Laura</h3>
-                <p>A magical sorceress who controls light.</p>
-            </div>
-
-            <div class="card">
-                <h3>Drax</h3>
-                <p>The shadow assassin who moves unseen.</p>
+                <p>The Sorceress</p>
+                <div class="stat-tag">✨ High Speed</div>
             </div>
         </div>
     </section>
 
-    <!-- Levels Section -->
-    <section id="levels" class="section">
-        <h2>Game Levels</h2>
+    <section id="game-container" class="hidden">
+        <div class="game-ui">
+            <div id="score-text">Score: 0</div>
+            <div id="level-text">Forest</div>
+            <div class="hp-container"><div id="hp-bar"></div></div>
+        </div>
+        
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="overlay-msg" class="hidden"></div>
+            
+            <div id="mobile-controls">
+                <div class="ctrl-btn" id="up">▲</div>
+                <div class="ctrl-row">
+                    <div class="ctrl-btn" id="left">◀</div>
+                    <div class="ctrl-btn" id="down">▼</div>
+                    <div class="ctrl-btn" id="right">▶</div>
+                </div>
+            </div>
+            <div id="special-btn-mobile">ULT</div>
 
-        <ul>
-            <li>🌲 Dark Forest</li>
-            <li>🏰 Cursed Castle</li>
-            <li>🔥 Fire Caverns</li>
-            <li>🌌 Shadow Realm Core</li>
-        </ul>
+            <div id="game-over-overlay" class="hidden">
+                <h2 id="death-title">YOU PERISHED</h2>
+                <button onclick="location.reload()">Restart</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Created by Brendan Unogu | Game Design Project</p>
-    </footer>
+    <audio id="bg-music" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3"></audio>
+    <audio id="sfx-shoot" src="https://actions.google.com/sounds/v1/science_fiction/laser_gun_shot.ogg"></audio>
+    <audio id="sfx-hit" src="https://actions.google.com/sounds/v1/impacts/flesh_impact_hit.ogg"></audio>
+    <audio id="sfx-levelup" src="https://actions.google.com/sounds/v1/foley/wind_chime_single.ogg"></audio>
 
+    <script src="script.js"></script>
 </body>
 </html>
