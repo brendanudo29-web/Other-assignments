@@ -58,7 +58,9 @@ nav a:hover { color: #00c6ff; }
     text-shadow: 0px 0px 15px #167cff;
 }
 
-
+.hero-img{
+height: 700px;
+}
 .hero h1 {
   font-size: 48px;
   font-weight: 700;

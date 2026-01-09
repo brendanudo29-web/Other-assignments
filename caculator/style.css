@@ -1,0 +1,91 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator {
+    background-color: #2c2c2c;
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.brand {
+    color: #00d4ff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover { background-color: #4d4d4d; }
+button:active { transform: scale(0.95); }
+
+.operator { color: #00d4ff; }
+.clear { background-color: #ff4d4d; grid-column: span 2; }
+.equal { background-color: #00d4ff; color: #1a1a1a; }
+.zero { grid-column: span 2; }
+/* ... keep your previous CSS ... */
+
+.calculator {
+    /* Change width to max-width and use 90% for mobile */
+    width: 90%; 
+    max-width: 340px; 
+    padding: 20px;
+    border-radius: 25px; /* Slightly rounder for mobile feel */
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    button {
+        height: 70px; /* Larger buttons are easier to tap with thumbs */
+        font-size: 1.4rem;
+    }
+
+    #display {
+        height: 80px;
+        font-size: 2.5rem;
+    }
+}
