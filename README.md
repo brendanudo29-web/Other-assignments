@@ -1,12 +1,12 @@
 Hi, I'm Brendan Unogu
 
-I am an aspiring game developer and programmer with a strong interest in web development, game design, and interactive user experiences.  
+I am an aspiring Software  and game developer with a strong interest in web development, game design, and interactive user experiences.  
 I enjoy building projects that combine creativity, storytelling, and code, and I am currently developing my skills through hands-on projects.
 
-This GitHub contains my learning projects and portfolio, created as part of my preparation for scholarships and future opportunities in technology and game development.
+This GitHub contains my learning projects and portfolio, created as part of my preparation for scholarships and future opportunities in technology and software development.
 
 ---
-# My Awesome Game
+
 
 ## Description
 Hi! I’m **Unogu Brendan**. This is a fun, fast-paced action game where you move, dodge attacks, and collect points. Built with **HTML, CSS, and JavaScript**, it works on both desktop and mobile.
